@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
+using Exercise.Builder;
 
-namespace Coding.Exercise
+namespace BuilderUT
 {
     [TestFixture]
     public class TestSuite
@@ -14,7 +15,7 @@ namespace Coding.Exercise
         public void EmptyTest()
         {
             var cb = new CodeBuilder("Foo");
-            Assert.That(PreProcess(cb.ToString()), Is.EqualTo("public class Foo\n{\n}"));
+            Assert.That(PreProcess(cb.ToString()), Is.EqualTo("public class Foo\r\n{\r\n}"));
         }
 
         [Test]
